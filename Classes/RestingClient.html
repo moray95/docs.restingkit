@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RestingClient Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RestingClient" class="dashAnchor"></a>
+    <a title="RestingClient Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RestingKit Docs</a> (76% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RestingKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RestingClient Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AlamofireClient.html">AlamofireClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlamofireClient/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPDataResponse.html">HTTPDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFile.html">MultipartFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder.html">MultipartFormDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressablePromise.html">ProgressablePromise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder.html">QueryParameterEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestResponseLoggingInterceptor.html">RequestResponseLoggingInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingClient.html">RestingClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequest.html">RestingRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequestConverter.html">RestingRequestConverter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RequestEncoding.html">RequestEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPResponseType.html">HTTPResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestConverter.html">RequestConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RestingInterceptor.html">RestingInterceptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Nothing.html">Nothing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RestingKit15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RestingClient</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">RestingClient</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>RestingClient</code> is the core class of <code>RestingKit</code>. It allows sending requests
+and receiving their responses as promises through a high-level API.</p>
+
+<p>The <code>RestingClient</code> is configured with the following components:</p>
+
+<ul>
+<li><code>baseUrl</code>: The base URL of the server we want to connect. One client can only connect to a single base URL.
+Therefore, if you wish to use multiple APIs, you should use different clients for each of them.</li>
+<li><code>decoder</code>: The decoder to use for decoding responses.</li>
+<li><code>requestConverter</code>: The converter to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>s.</li>
+<li><code>interceptors</code>: The interceptors to run for each request and response.</li>
+<li><code>httpClient</code>: The client responsible for sending the request and receiving its response.</li>
+</ul>
+
+<p>There are two function families within the class: <code>perform(_:)</code> and <code>upload(_:)</code>, each with several
+overloads for convenience. Even though they do the same thing in the core, The way to achieve their goal is
+different. <code>perform(_:)</code> sends the request by loading the request body into memory, while <code>upload(_:)</code> streams
+the body from a file without loading it. <code>upload(_:)</code> also allows tracking upload progress. For most requests
+<code>perform(_:)</code> should be good enough, but for cases when the request body is expected to be large, <code>upload(_:)</code>
+should be preferred.</p>
+
+<p>The process within a <code>RestingClient</code> is the following:</p>
+
+<ol>
+<li>The request converter converts the <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code> into an <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>.</li>
+<li>The interceptors are run with the produced <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code> in the order provided.
+At this point, one of the interceptors might decide to modify the request or stop the execution
+chain by returning a response or and error.</li>
+<li>If the interceptors doesn&rsquo;t block the chain, the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> is called to perform the actual request.</li>
+<li>The response from <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> is passed to the interceptors. At this point, an interceptor might decide
+to change the response or recover from an error.</li>
+<li>The response is then converted into an <code><a href="../Classes/HTTPResponse.html">HTTPResponse</a></code> by decoding the response body.</li>
+</ol>
+
+<p>Cases when request promises might fail:</p>
+
+<ol>
+<li>The encoding of the request has failed.</li>
+<li>The decoding of the response has faied.</li>
+<li>Networking errors.</li>
+<li>The response status was not 2xx.</li>
+<li>An interceptor decided to raise an error.</li>
+</ol>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC7baseUrl7decoder04httpC016requestConverter12interceptorsACSS_10Foundation11JSONDecoderCAA10HTTPClient_pAA07RequestI0_pSayAA0A11Interceptor_pGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(baseUrl:decoder:httpClient:requestConverter:interceptors:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC7baseUrl7decoder04httpC016requestConverter12interceptorsACSS_10Foundation11JSONDecoderCAA10HTTPClient_pAA07RequestI0_pSayAA0A11Interceptor_pGtcfc">init(baseUrl:decoder:httpClient:requestConverter:interceptors:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code>RestingClient</code> with the provided configuration.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span><span class="p">,</span>
+            <span class="nv">httpClient</span><span class="p">:</span> <span class="kt"><a href="../Protocols/HTTPClient.html">HTTPClient</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/AlamofireClient.html">AlamofireClient</a></span><span class="p">(),</span>
+            <span class="nv">requestConverter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestConverter.html">RequestConverter</a></span><span class="p">,</span>
+            <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/RestingInterceptor.html">RestingInterceptor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseUrl</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The base URL of the endpoint to use by the client (ex: <code>https://api.example.com/v2</code>).
+                 Each request&rsquo;s path sent through the <code>RestingClient</code> will be relative to this URL.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>decoder</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>JSONDecoder</code> to use when decoding responses from the requests.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>httpClient</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> to use for sending the requests.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>requestConverter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>s.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interceptors</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Protocols/RestingInterceptor.html">RestingInterceptor</a></code>s to run when sending each request and response.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyq_GGAA0A7RequestCyxq_GSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/perform(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyq_GGAA0A7RequestCyxq_GSERzSeR_r0_lF">perform(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a request.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">perform</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyq_SgGGAA0A7RequestCyxAJGSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/perform(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyq_SgGGAA0A7RequestCyxAJGSERzSeR_r0_lF">perform(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a request. Overload for optional response type.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+<p>Use this overload when the resposne might be empty. The returned
+promise will resolve with <code>nil</code> <strong>if and only if</strong> the HTTP response
+body is empty.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>A response with a content-length greater then zero will
+       try to decode the response to <code>ResponseType</code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">perform</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">?</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyytGGAA0A7RequestCyxAA7NothingVGSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/perform(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC7performy07PromiseB00E0CyAA12HTTPResponseCyytGGAA0A7RequestCyxAA7NothingVGSERzlF">perform(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs a request. Overload for empty response.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+<p>Use this overload when the resposne is always empty or will always
+be discarded.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">perform</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt"><a href="../Structs/Nothing.html">Nothing</a></span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyq_GGAA0A7RequestCyxq_GSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyq_GGAA0A7RequestCyxq_GSERzSeR_r0_lF">upload(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads a request.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+<p>Prefer using <code>upload</code> over <code>perform</code> when the request body way me large as is
+will not be loaded into memory or you want to track the upload progress
+of the request.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The progress callback on the returned <code><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></code> is
+       not guarenteed to be called. This behavious depends on the implementation
+       of the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> (as it needs to be converted to a streamed request)
+       and the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> (as it is its responsibility to call the handler).
+       Implementations provided by <code>RestingKit</code> supports the call to the
+       progress callback.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">upload</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise with progress handler for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyq_SgGGAA0A7RequestCyxAIGSERzSeR_r0_lF"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyq_SgGGAA0A7RequestCyxAIGSERzSeR_r0_lF">upload(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads a request. Overload for optional response type.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+<p>Prefer using <code>upload</code> over <code>perform</code> when the request body way me large as is
+will not be loaded into memory or you want to track the upload progress
+of the request.</p>
+
+<p>Use this overload when the resposne might be empty. The returned
+promise will resolve with <code>nil</code> <strong>if and only if</strong> the HTTP response
+body is empty.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>A response with a content-length greater then zero will
+       try to decode the response to <code>ResponseType</code>.</p>
+
+</div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The progress callback on the returned <code><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></code> is
+       not guarenteed to be called. This behavious depends on the implementation
+       of the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> (as it needs to be converted to a streamed request)
+       and the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> (as it is its responsibility to call the handler).
+       Implementations provided by <code>RestingKit</code> supports the call to the
+       progress callback.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">upload</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span>
+    <span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt">ResponseType</span><span class="p">?</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">ResponseType</span><span class="p">?</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise with progress handler for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyytGGAA0A7RequestCyxAA7NothingVGSERzlF"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A6ClientC6uploadyAA19ProgressablePromiseCyAA12HTTPResponseCyytGGAA0A7RequestCyxAA7NothingVGSERzlF">upload(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Uploads a request. Overload for empty response.</p>
+
+<p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
+<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+to perform the request and finally decode the response using the
+provided decoder.</p>
+
+<p>Prefer using <code>upload</code> over <code>perform</code> when the request body way me large as is
+will not be loaded into memory or you want to track the upload progress
+of the request.</p>
+
+<p>Use this overload when the resposne is always empty or will always
+be discarded.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>The progress callback on the returned <code><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></code> is
+       not guarenteed to be called. This behavious depends on the implementation
+       of the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> (as it needs to be converted to a streamed request)
+       and the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> (as it is its responsibility to call the handler).
+       Implementations provided by <code>RestingKit</code> supports the call to the
+       progress callback.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">upload</span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">:</span> <span class="kt">Encodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Classes/RestingRequest.html">RestingRequest</a></span><span class="o">&lt;</span><span class="kt">RequestType</span><span class="p">,</span> <span class="kt"><a href="../Structs/Nothing.html">Nothing</a></span><span class="o">&gt;</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ProgressablePromise.html">ProgressablePromise</a></span><span class="o">&lt;</span><span class="kt"><a href="../Classes/HTTPResponse.html">HTTPResponse</a></span><span class="o">&lt;</span><span class="kt">Void</span><span class="o">&gt;&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A promise with progress handler for the response.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

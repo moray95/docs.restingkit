@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RestingKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="RestingKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">RestingKit Docs</a> (76% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">RestingKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        RestingKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AlamofireClient.html">AlamofireClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AlamofireClient/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HTTPDataResponse.html">HTTPDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultipartFile.html">MultipartFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultipartFormDataEncoder.html">MultipartFormDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultipartFormDataEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultipartFormDataEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MultipartFormDataEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ProgressablePromise.html">ProgressablePromise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QueryParameterEncoder.html">QueryParameterEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QueryParameterEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QueryParameterEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/QueryParameterEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RequestResponseLoggingInterceptor.html">RequestResponseLoggingInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingClient.html">RestingClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingRequest.html">RestingRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/RequestEncoding.html">RequestEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HTTPResponseType.html">HTTPResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestConverter.html">RequestConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RestingInterceptor.html">RestingInterceptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Nothing.html">Nothing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RestingKit15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='restingkit' class='heading'>RestingKit</h1>
+
+<p><a href="https://travis-ci.org/moray95/RestingKit"><img src="https://img.shields.io/travis/moray95/RestingKit.svg?style=flat" alt="CI Status"></a>
+<a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/v/RestingKit.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/l/RestingKit.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/p/RestingKit.svg?style=flat" alt="Platform"></a></p>
+<h2 id='introduction' class='heading'>Introduction</h2>
+
+<p>RestingKit is a higher-level wrapper around <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> and <a href="https://github.com/mxcl/PromiseKit">PromiseKit</a> written in Swift that allows developers to concentrate on the important stuff instead of writing boiler-plate code for their REST API.</p>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>Configurable HTTP client (Alamofire is currently the only one provided, but you can write your own!)</li>
+<li>Path variable expansion powered by <a href="https://github.com/groue/GRMustache.swift">GRMustache.swift</a></li>
+<li>Interception (and modification) of all requests and responses</li>
+</ul>
+<h2 id='requirements' class='heading'>Requirements</h2>
+
+<ul>
+<li><p>iOS 10.0+</p></li>
+<li><p>Swift 4.2</p></li>
+</ul>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>RestingKit is available through <a href="https://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RestingKit'</span>
+</code></pre>
+<h2 id='example-project' class='heading'>Example project</h2>
+
+<p>An example project is included within the repositry. To run it, first execute <code>pod install</code>, then open <code>RestingKit.xcworkspace</code>. If you want to test file uploads with the example app, go into the <code>image_server</code> directory and run <code>php -S 0.0.0.0:9000 -c .</code>, which will start a dummy server for your uploads. The uploads will be stored in the <code>uploads</code> directory.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+<h3 id='basic-example' class='heading'>Basic example</h3>
+
+<ol>
+<li>Create a <code><a href="Classes/RestingClient.html">RestingClient</a></code></li>
+</ol>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">RestingKit</span>
+
+<span class="k">let</span> <span class="nv">requestConverter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
+                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
+                                  <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">)</span>
+</code></pre>
+
+<ul>
+<li><code><a href="Classes/RestingClient.html">RestingClient</a></code> is the core class within RestingKit that does the heavy lifting by executing the requests. It is configured to use a single base URL, so if you need to access multiple APIs, you&rsquo;ll need to create multiple clients.</li>
+<li><code><a href="Protocols/RequestConverter.html">RequestConverter</a></code> s transforms a <code><a href="Classes/RestingRequest.html">RestingRequest</a></code> to a <code><a href="Protocols/HTTPRequest.html">HTTPRequest</a></code>. <code><a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a></code> is the provided implementation that supports path templating.</li>
+</ul>
+
+<ol>
+<li>Define your models and endpoints</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="kd">struct</span> <span class="kt">PostCreateModel</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
+       <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">Int</span>
+       <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span>
+       <span class="k">let</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span>
+
+       <span class="nf">init</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
+           <span class="k">self</span><span class="o">.</span><span class="n">userId</span> <span class="o">=</span> <span class="n">userId</span>
+           <span class="k">self</span><span class="o">.</span><span class="n">title</span> <span class="o">=</span> <span class="n">title</span>
+           <span class="k">self</span><span class="o">.</span><span class="n">body</span> <span class="o">=</span> <span class="n">body</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+
+   <span class="kd">struct</span> <span class="kt">PostModel</span><span class="p">:</span> <span class="kt">Codable</span> <span class="p">{</span>
+       <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">Int</span>
+       <span class="k">let</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">Int</span>
+       <span class="k">let</span> <span class="nv">title</span><span class="p">:</span> <span class="kt">String</span>
+       <span class="k">let</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">String</span>
+   <span class="p">}</span>
+
+   <span class="k">let</span> <span class="nv">createPostEndpoint</span> <span class="o">=</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">PostCreateModel</span><span class="p">,</span> <span class="kt">PostModel</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span>
+                                                                 <span class="s">"/posts"</span><span class="p">,</span>
+                                                                 <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
+</code></pre>
+<pre class="highlight plaintext"><code>An `Endpoint` is defined by the models of the request and response, the path (relative to the `RestingClient`'s `baseUrl`), the HTTP method to use and the encoding. If the request doesn't expect any content or doesn't return anything, you can use the special `Nothing` class. Ideally, we would use `Void`, but it is not possible to make it `Encodable` or `Decodable`.
+</code></pre>
+
+<ol>
+<li>Create the request and make the actual call</li>
+</ol>
+<pre class="highlight swift"><code>   <span class="k">let</span> <span class="nv">postCreateModel</span> <span class="o">=</span> <span class="kt">PostCreateModel</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                                         <span class="nv">title</span><span class="p">:</span> <span class="s">"Hello world"</span><span class="p">,</span>
+                                         <span class="nv">body</span><span class="p">:</span> <span class="s">"Some awesome message"</span><span class="p">)</span>
+   <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">RestingRequest</span><span class="p">(</span><span class="n">endpoint</span> <span class="n">createPostEndpoint</span><span class="p">,</span>
+                                <span class="nv">body</span><span class="p">:</span> <span class="n">postCreateModel</span><span class="p">)</span>
+   <span class="n">restingClient</span><span class="o">.</span><span class="nf">perform</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Headers: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">post</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Created post with id: </span><span class="se">\(</span><span class="n">post</span><span class="o">.</span><span class="n">id</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+   <span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+   <span class="p">}</span>
+</code></pre>
+
+<p>The promise will fail when the server responds with an HTTP status &gt;299, so you don&rsquo;t have to handle this case.</p>
+
+<p>And that&rsquo;s it!</p>
+<h3 id='handling-responses-with-no-content' class='heading'>Handling responses with no content</h3>
+
+<p>If a request might provide a response that might be empty, you can create an <code><a href="Structs/Endpoint.html">Endpoint</a></code> with an optional response type. That way, if the response is empty, <code>nil</code> will be returned.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">createPostEndpoint</span> <span class="o">=</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">PostCreateModel</span><span class="p">,</span> <span class="kt">PostModel</span><span class="p">?</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span>
+                                                               <span class="s">"/posts"</span><span class="p">,</span>
+                                                               <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">postCreateModel</span> <span class="o">=</span> <span class="kt">PostCreateModel</span><span class="p">(</span><span class="nv">userId</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                                      <span class="nv">title</span><span class="p">:</span> <span class="s">"Hello world"</span><span class="p">,</span>
+                                      <span class="nv">body</span><span class="p">:</span> <span class="s">"Some awesome message"</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">RestingRequest</span><span class="p">(</span><span class="n">endpoint</span> <span class="n">createPostEndpoint</span><span class="p">,</span>
+                             <span class="nv">body</span><span class="p">:</span> <span class="n">postCreateModel</span><span class="p">)</span>
+<span class="n">restingClient</span><span class="o">.</span><span class="nf">perform</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Headers: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">post</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">body</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Created post with id: </span><span class="se">\(</span><span class="n">post</span><span class="o">.</span><span class="n">id</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"Empty body"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Note:</strong> For this feature to work, the response needs to be truely empty (ie. a content-length of 0). An empty JSON object will produce a decoding error.</p>
+<h3 id='path-variables' class='heading'>Path variables</h3>
+
+<p>The provided <code><a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a></code> allows templating in paths by using <a href="https://github.com/groue/GRMustache.swift">Mustache.swift</a>.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">getPostEndpoint</span> <span class="o">=</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">Nothing</span><span class="p">,</span> <span class="kt">PostModel</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="k">get</span><span class="p">,</span>
+                                                   <span class="s">"/posts/{{post_id}}"</span><span class="p">,</span>
+                                                   <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">query</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">RestingRequest</span><span class="p">(</span><span class="nv">endpoint</span><span class="p">:</span> <span class="n">getPostEndpoint</span><span class="p">,</span>
+                             <span class="nv">body</span><span class="p">:</span> <span class="kt">Nothing</span><span class="p">(),</span>
+                             <span class="nv">pathVariables</span><span class="p">:</span> <span class="p">[</span><span class="s">"post_id"</span><span class="p">:</span> <span class="mi">1</span><span class="p">])</span>
+
+<span class="n">restingClient</span><span class="o">.</span><span class="nf">perform</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Got post: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred: </span><span class="se">\(</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='multipart-form-data-amp-file-upload' class='heading'>Multipart form data &amp; file upload</h3>
+
+<p>It is possible to perform a multipart form data request with RestingKit. The only thing to make the request is to set the <code><a href="Structs/Endpoint.html">Endpoint</a></code>&lsquo;s encoding to <code>.multipartFormData</code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">multipartEndpoint</span> <span class="o">=</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">MyModel</span><span class="p">,</span> <span class="kt">Nothing</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span>
+                                                   <span class="s">"/some_resource"</span><span class="p">,</span>
+                                                   <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">multipartFormData</span><span class="p">)</span>
+</code></pre>
+
+<p>Now, each request using this endpoint will be encoded as <code>multipart/form-data</code>.
+Uploading files is also that easy. You can use the provided <code><a href="Classes/MultipartFile.html">MultipartFile</a></code> class within your models, and magically, the file will be uploaded.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ImageUploadModel</span><span class="p">:</span> <span class="kt">Encodable</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">MultipartFile</span>
+    <span class="nf">init</span><span class="p">(</span><span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">file</span> <span class="o">=</span> <span class="kt">MultipartFile</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">imageURL</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">RestingRequest</span><span class="p">(</span><span class="nv">endpoint</span><span class="p">:</span> <span class="n">multipartEndpoint</span><span class="p">,</span>
+                             <span class="nv">body</span><span class="p">:</span> <span class="kt">ImageUploadModel</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">imageUrl</span><span class="p">))</span>
+<span class="n">restingClient</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">promise</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Success!"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Error: </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><strong>Note:</strong> You should use <code>upload</code> methods on the <code><a href="Classes/RestingClient.html">RestingClient</a></code> instead of <code>perform</code> when dealing with files and large amounts of data. <code>perform</code> will load the whole request body into memory,
+while <code>upload</code> will store it into a temporary file and stream it without loading into memory.</p>
+
+<p>The encoding is handled by the <code><a href="Classes/MultipartFormDataEncoder.html">MultipartFormDataEncoder</a></code>, which provides an interface and configuration options similar to <code>JSONEncoder</code>. You can customize the <code><a href="Classes/MultipartFormDataEncoder.html">MultipartFormDataEncoder</a></code>
+used by the <code><a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a></code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">formDataEncoder</span> <span class="o">=</span> <span class="kt">MultipartFormDataEncoder</span><span class="p">()</span>
+<span class="n">formDataEncoder</span><span class="o">.</span><span class="n">keyEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">convertToSnakeCase</span>
+<span class="n">formDataEncoder</span><span class="o">.</span><span class="n">dateEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">secondsSince1970</span>
+<span class="n">formDataEncoder</span><span class="o">.</span><span class="n">dataEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">raw</span>
+<span class="k">let</span> <span class="nv">converter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">(</span><span class="nv">multipartFormDataEncoder</span><span class="p">:</span> <span class="n">formDataEncoder</span><span class="p">)</span>
+</code></pre>
+<h3 id='progress-handlers' class='heading'>Progress handlers</h3>
+
+<p><code><a href="Classes/RestingClient.html">RestingClient</a></code>&rsquo;s <code>upload</code> methods returns a <code><a href="Classes/ProgressablePromise.html">ProgressablePromise</a></code>, which acts like classic promisses but also
+accept progress handlers.</p>
+<pre class="highlight swift"><code><span class="n">restingClient</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">progress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Upload </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span> <span class="o">*</span> <span class="mi">100</span><span class="se">)</span><span class="s">% completed"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"Uploaded completed with response: </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+<span class="p">}</span><span class="o">.</span><span class="k">catch</span> <span class="p">{</span> <span class="n">error</span> <span class="k">in</span>
+    <span class="nf">print</span><span class="p">(</span><span class="s">"An error occurred"</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<h3 id='interceptors' class='heading'>Interceptors</h3>
+
+<p>Interceptors allow to intercept any request and response, and modify it before the request is sent or the response processed. Some basic usages of interceptors include:</p>
+
+<ul>
+<li>Logging requests and responses</li>
+<li>Injecting headers</li>
+<li>Retrying failed requests</li>
+</ul>
+
+<p>To use interceptors, you will need to implement the <code><a href="Protocols/RestingInterceptor.html">RestingInterceptor</a></code> protocol and provide your interceptor to your <code><a href="Classes/RestingClient.html">RestingClient</a></code>.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">LogInterceptor</span><span class="p">:</span> <span class="kt">RestingInterceptor</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">intercept</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">HTTPRequest</span><span class="p">,</span> <span class="nv">execution</span><span class="p">:</span> <span class="kt">Execution</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt">ProgressablePromise</span><span class="o">&lt;</span><span class="kt">HTTPDataResponse</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"sending request </span><span class="se">\(</span><span class="n">request</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nf">execution</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="k">get</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+            <span class="nf">print</span><span class="p">(</span><span class="s">"got response </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="kt">DeviceIdInjector</span><span class="p">:</span> <span class="kt">RestingInterceptor</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">intercept</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">HTTPRequest</span><span class="p">,</span> <span class="nv">execution</span><span class="p">:</span> <span class="kt">Execution</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ProgressablePromise</span><span class="o">&lt;</span><span class="kt">HTTPDataResponse</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">urlRequest</span>
+        <span class="n">urlRequest</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="kt">UIDevice</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">identifierForVendor</span><span class="p">?</span><span class="o">.</span><span class="n">uuidString</span><span class="p">,</span>
+                           <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"device-id"</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">BasicHTTPRequest</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="n">urlRequest</span><span class="p">,</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">fileUrl</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nf">execution</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
+                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
+                                  <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">,</span>
+                                  <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt">DeviceIdInjector</span><span class="p">(),</span> <span class="kt">LogInterceptor</span><span class="p">()])</span>
+</code></pre>
+
+<p>The <code><a href="Classes/RestingClient.html">RestingClient</a></code> will pass the request to the interceptors in the provided order, while the response is passed in the reverse order. Therefore, it is important to place <code>LogInterceptor</code> at the end of the array (otherwise, it will not be able to log the <code>device-id</code> header added by <code>DeviceIdInjector</code>).</p>
+
+<p>RestingKit provides an interceptor for logging requests and responses: <code><a href="Classes/RequestResponseLoggingInterceptor.html">RequestResponseLoggingInterceptor</a></code>.</p>
+
+<p><strong>Important</strong>: It is required for each interceptor to call the <code>execution</code> parameter, as it is what will run the next interceptors and finally the request. Unless, of course, you do not want to run additional interceptors or send the request.</p>
+<h3 id='using-a-custom-httpclient' class='heading'>Using a custom HTTPClient</h3>
+
+<p><code><a href="Protocols/HTTPClient.html">HTTPClient</a></code>s are the classes that performs the requests. They take an <code><a href="Protocols/HTTPRequest.html">HTTPRequest</a></code> and return a <code>(Progressable)Promise&lt;HTTPDataResponse&gt;</code> without doing anything. <code><a href="Classes/AlamofireClient.html">AlamofireClient</a></code> is the provided implementation that uses Alamofire to perform the requests and the default client used by <code><a href="Classes/RestingClient.html">RestingClient</a></code>. You can configure a <code><a href="Classes/RestingClient.html">RestingClient</a></code> to use your own implementation:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MyHTTPClient</span><span class="p">:</span> <span class="kt">HTTPClient</span> <span class="p">{</span>
+    <span class="kd">public</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">HTTPDataResponse</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="c1">// Handle classic request</span>
+    <span class="p">}</span>
+    <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="nv">request</span><span class="p">:</span> <span class="kt">HTTPRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ProgressablePromise</span><span class="o">&lt;</span><span class="kt">HTTPDataResponse</span><span class="o">&gt;</span> <span class="p">{</span>
+        <span class="c1">// Handle uplaod request, with a progress handler</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
+                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
+                                  <span class="nv">httpClient</span><span class="p">:</span> <span class="kt">MyHTTPClient</span><span class="p">(),</span>
+                                  <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">)</span>
+</code></pre>
+<h2 id='work-in-progress' class='heading'>Work in progress</h2>
+
+<p>As RestingKit is still new and in development, there are some missing features that needs implementation:</p>
+
+<ul>
+<li>File downloads</li>
+<li>Any other feature you might request!</li>
+</ul>
+
+<p>Additionally, there might be some api-breaking changes until the project reaches full maturity.</p>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>If you need help with getting started or have a feature request, just open up an issue. Pull requests are also welcome for bug fixes and new features.</p>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Moray Baruh</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>RestingKit is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

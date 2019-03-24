@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HTTPRequest Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/HTTPRequest" class="dashAnchor"></a>
+    <a title="HTTPRequest Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RestingKit Docs</a> (76% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RestingKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HTTPRequest Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AlamofireClient.html">AlamofireClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlamofireClient/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPDataResponse.html">HTTPDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPResponse.html">HTTPResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFile.html">MultipartFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder.html">MultipartFormDataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormDataEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ProgressablePromise.html">ProgressablePromise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder.html">QueryParameterEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RequestResponseLoggingInterceptor.html">RequestResponseLoggingInterceptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingClient.html">RestingClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequest.html">RestingRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequestConverter.html">RestingRequestConverter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RequestEncoding.html">RequestEncoding</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPRequest.html">HTTPRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HTTPResponseType.html">HTTPResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestConverter.html">RequestConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RestingInterceptor.html">RestingInterceptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Nothing.html">Nothing</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RestingKit15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HTTPRequest</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HTTPRequest</span></code></pre>
+
+                </div>
+              </div>
+            <p>Represents a lower-level HTTP request.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit11HTTPRequestP10urlRequest10Foundation10URLRequestVvp"></a>
+                    <a name="//apple_ref/swift/Property/urlRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit11HTTPRequestP10urlRequest10Foundation10URLRequestVvp">urlRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The underlaying <code>URLRequest</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit11HTTPRequestP7fileUrl10Foundation3URLVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/fileUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit11HTTPRequestP7fileUrl10Foundation3URLVSgvp">fileUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A URL to a file to be used as a streamed request body.
+If <code>fileURL</code> is not <code>nil</code>, <code>urlRequest.httpBody</code> and
+<code>urlRequest.httpBodyStream</code> <strong>must</strong> be <code>nil</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-03-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
