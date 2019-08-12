@@ -2,14 +2,14 @@
   "warnings": [
     {
       "file": "/Users/user/RestingKit/RestingKit/Clients/AlamofireClient.swift",
-      "line": 23,
+      "line": 30,
       "symbol": "AlamofireClient.perform(urlRequest:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/user/RestingKit/RestingKit/Clients/AlamofireClient.swift",
-      "line": 49,
+      "line": 56,
       "symbol": "AlamofireClient.upload(request:fileUrl:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
