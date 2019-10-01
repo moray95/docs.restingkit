@@ -14,7 +14,7 @@
     <a title="RestingClient Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RestingKit Docs</a> (76% documented)</p>
+        <p><a href="../index.html">RestingKit Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -35,9 +35,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AlamofireClient/Error.html">– Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/HTTPDataResponse.html">HTTPDataResponse</a>
@@ -107,9 +104,6 @@
                 <a href="../Protocols/HTTPClient.html">HTTPClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HTTPRequest.html">HTTPRequest</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/HTTPResponseType.html">HTTPResponseType</a>
               </li>
               <li class="nav-group-task">
@@ -125,6 +119,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Nothing.html">Nothing</a>
@@ -160,7 +157,7 @@ and receiving their responses as promises through a high-level API.</p>
 <li><code>baseUrl</code>: The base URL of the server we want to connect. One client can only connect to a single base URL.
 Therefore, if you wish to use multiple APIs, you should use different clients for each of them.</li>
 <li><code>decoder</code>: The decoder to use for decoding responses.</li>
-<li><code>requestConverter</code>: The converter to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>s.</li>
+<li><code>requestConverter</code>: The converter to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>s.</li>
 <li><code>interceptors</code>: The interceptors to run for each request and response.</li>
 <li><code>httpClient</code>: The client responsible for sending the request and receiving its response.</li>
 </ul>
@@ -175,8 +172,8 @@ should be preferred.</p>
 <p>The process within a <code>RestingClient</code> is the following:</p>
 
 <ol>
-<li>The request converter converts the <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code> into an <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>.</li>
-<li>The interceptors are run with the produced <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code> in the order provided.
+<li>The request converter converts the <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code> into an <code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>.</li>
+<li>The interceptors are run with the produced <code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code> in the order provided.
 At this point, one of the interceptors might decide to modify the request or stop the execution
 chain by returning a response or and error.</li>
 <li>If the interceptors doesn&rsquo;t block the chain, the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code> is called to perform the actual request.</li>
@@ -220,7 +217,7 @@ to change the response or recover from an error.</li>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
-            <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span><span class="p">,</span>
+            <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">(),</span>
             <span class="nv">httpClient</span><span class="p">:</span> <span class="kt"><a href="../Protocols/HTTPClient.html">HTTPClient</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/AlamofireClient.html">AlamofireClient</a></span><span class="p">(),</span>
             <span class="nv">requestConverter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestConverter.html">RequestConverter</a></span><span class="p">,</span>
             <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/RestingInterceptor.html">RestingInterceptor</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
@@ -276,7 +273,7 @@ to change the response or recover from an error.</li>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>s.</p>
+                                  <p>The <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to use for converting <code><a href="../Classes/RestingRequest.html">RestingRequest</a></code>s to <code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>s.</p>
                                 </div>
                               </td>
                             </tr>
@@ -314,7 +311,7 @@ to change the response or recover from an error.</li>
                         <p>Performs a request.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -370,7 +367,7 @@ provided decoder.</p>
                         <p>Performs a request. Overload for optional response type.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -436,7 +433,7 @@ body is empty.</p>
                         <p>Performs a request. Overload for empty response.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -495,7 +492,7 @@ be discarded.</p>
                         <p>Uploads a request.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -565,7 +562,7 @@ of the request.</p>
                         <p>Uploads a request. Overload for optional response type.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -645,7 +642,7 @@ body is empty.</p>
                         <p>Uploads a request. Overload for empty response.</p>
 
 <p>Uses the <code><a href="../Protocols/RequestConverter.html">RequestConverter</a></code> to convert the request into an
-<code><a href="../Protocols/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
+<code><a href="../Structs/HTTPRequest.html">HTTPRequest</a></code>, run the provided interceptors, call the <code><a href="../Protocols/HTTPClient.html">HTTPClient</a></code>
 to perform the request and finally decode the response using the
 provided decoder.</p>
 
@@ -707,8 +704,8 @@ be discarded.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-08-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-10-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

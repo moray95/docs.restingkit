@@ -13,7 +13,7 @@
     <a title="RestingKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RestingKit Docs</a> (76% documented)</p>
+        <p><a href="index.html">RestingKit Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -34,9 +34,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AlamofireClient/Error.html">– Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/HTTPDataResponse.html">HTTPDataResponse</a>
@@ -106,9 +103,6 @@
                 <a href="Protocols/HTTPClient.html">HTTPClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HTTPRequest.html">HTTPRequest</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Protocols/HTTPResponseType.html">HTTPResponseType</a>
               </li>
               <li class="nav-group-task">
@@ -124,6 +118,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Nothing.html">Nothing</a>
@@ -164,7 +161,7 @@
 
 <ul>
 <li><p>iOS 10.0+</p></li>
-<li><p>Swift 4.2</p></li>
+<li><p>Swift 5.0+</p></li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
 
@@ -182,16 +179,10 @@
 </ol>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">RestingKit</span>
 
-<span class="k">let</span> <span class="nv">requestConverter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">()</span>
-<span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
-                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
-                                  <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">)</span>
 </code></pre>
 
-<ul>
-<li><code><a href="Classes/RestingClient.html">RestingClient</a></code> is the core class within RestingKit that does the heavy lifting by executing the requests. It is configured to use a single base URL, so if you need to access multiple APIs, you&rsquo;ll need to create multiple clients.</li>
-<li><code><a href="Protocols/RequestConverter.html">RequestConverter</a></code> s transforms a <code><a href="Classes/RestingRequest.html">RestingRequest</a></code> to a <code><a href="Protocols/HTTPRequest.html">HTTPRequest</a></code>. <code><a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a></code> is the provided implementation that supports path templating.</li>
-</ul>
+<p><code><a href="Classes/RestingClient.html">RestingClient</a></code> is the core class within RestingKit that does the heavy lifting by executing the requests. It is configured to use a single base URL, so if you need to access multiple APIs, you&rsquo;ll need to create multiple clients.</p>
 
 <ol>
 <li>Define your models and endpoints</li>
@@ -219,8 +210,8 @@
                                                                  <span class="s">"/posts"</span><span class="p">,</span>
                                                                  <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">json</span><span class="p">)</span>
 </code></pre>
-<pre class="highlight plaintext"><code>An `Endpoint` is defined by the models of the request and response, the path (relative to the `RestingClient`'s `baseUrl`), the HTTP method to use and the encoding. If the request doesn't expect any content or doesn't return anything, you can use the special `Nothing` class. Ideally, we would use `Void`, but it is not possible to make it `Encodable` or `Decodable`.
-</code></pre>
+
+<p>An <code><a href="Structs/Endpoint.html">Endpoint</a></code> is defined by the models of the request and response, the path (relative to the <code><a href="Classes/RestingClient.html">RestingClient</a></code>&lsquo;s <code>baseUrl</code>), the HTTP method to use and the encoding. If the request doesn&rsquo;t expect any content or doesn&rsquo;t return anything, you can use the special <code><a href="Structs/Nothing.html">Nothing</a></code> class. Ideally, we would use <code>Void</code>, but it is not possible to make it <code>Encodable</code> or <code>Decodable</code>.</p>
 
 <ol>
 <li>Create the request and make the actual call</li>
@@ -284,7 +275,7 @@
 </code></pre>
 <h3 id='multipart-form-data-amp-file-upload' class='heading'>Multipart form data &amp; file upload</h3>
 
-<p>It is possible to perform a multipart form data request with RestingKit. The only thing to make the request is to set the <code><a href="Structs/Endpoint.html">Endpoint</a></code>&lsquo;s encoding to <code>.multipartFormData</code>:</p>
+<p>It is possible to perform a multipart form data request with RestingKit. The only thing to make the request is to set the <code><a href="Structs/Endpoint.html">Endpoint</a></code>&rsquo;s encoding to <code>.multipartFormData</code>:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">multipartEndpoint</span> <span class="o">=</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">MyModel</span><span class="p">,</span> <span class="kt">Nothing</span><span class="o">&gt;</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span>
                                                    <span class="s">"/some_resource"</span><span class="p">,</span>
                                                    <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">multipartFormData</span><span class="p">)</span>
@@ -322,7 +313,7 @@ used by the <code><a href="Classes/RestingRequestConverter.html">RestingRequestC
 <h3 id='progress-handlers' class='heading'>Progress handlers</h3>
 
 <p><code><a href="Classes/RestingClient.html">RestingClient</a></code>&rsquo;s <code>upload</code> methods returns a <code><a href="Classes/ProgressablePromise.html">ProgressablePromise</a></code>, which acts like classic promisses but also
-accept progress handlers.</p>
+accept a progress handlers.</p>
 <pre class="highlight swift"><code><span class="n">restingClient</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">request</span><span class="p">)</span><span class="o">.</span><span class="n">progress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Upload </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span> <span class="o">*</span> <span class="mi">100</span><span class="se">)</span><span class="s">% completed"</span><span class="p">)</span>
 <span class="p">}</span><span class="o">.</span><span class="n">done</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
@@ -375,7 +366,7 @@ accept progress handlers.</p>
 <p><strong>Important</strong>: It is required for each interceptor to call the <code>execution</code> parameter, as it is what will run the next interceptors and finally the request. Unless, of course, you do not want to run additional interceptors or send the request.</p>
 <h3 id='using-a-custom-httpclient' class='heading'>Using a custom HTTPClient</h3>
 
-<p><code><a href="Protocols/HTTPClient.html">HTTPClient</a></code>s are the classes that performs the requests. They take an <code><a href="Protocols/HTTPRequest.html">HTTPRequest</a></code> and return a <code>(Progressable)Promise&lt;HTTPDataResponse&gt;</code> without doing anything. <code><a href="Classes/AlamofireClient.html">AlamofireClient</a></code> is the provided implementation that uses Alamofire to perform the requests and the default client used by <code><a href="Classes/RestingClient.html">RestingClient</a></code>. You can configure a <code><a href="Classes/RestingClient.html">RestingClient</a></code> to use your own implementation:</p>
+<p><code><a href="Protocols/HTTPClient.html">HTTPClient</a></code>s are the classes that performs the requests. They take an <code><a href="Structs/HTTPRequest.html">HTTPRequest</a></code> and return a <code>(Progressable)Promise&lt;HTTPDataResponse&gt;</code> without doing anything. <code><a href="Classes/AlamofireClient.html">AlamofireClient</a></code> is the provided implementation that uses Alamofire to perform the requests and the default client used by <code><a href="Classes/RestingClient.html">RestingClient</a></code>. You can configure a <code><a href="Classes/RestingClient.html">RestingClient</a></code> to use your own implementation:</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">MyHTTPClient</span><span class="p">:</span> <span class="kt">HTTPClient</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">func</span> <span class="nf">perform</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Promise</span><span class="o">&lt;</span><span class="kt">HTTPDataResponse</span><span class="o">&gt;</span> <span class="p">{</span>
         <span class="c1">// Handle classic request</span>
@@ -386,9 +377,7 @@ accept progress handlers.</p>
 <span class="p">}</span>
 
 <span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
-                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
-                                  <span class="nv">httpClient</span><span class="p">:</span> <span class="kt">MyHTTPClient</span><span class="p">(),</span>
-                                  <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">)</span>
+                                  <span class="nv">httpClient</span><span class="p">:</span> <span class="kt">MyHTTPClient</span><span class="p">())</span>
 </code></pre>
 <h2 id='work-in-progress' class='heading'>Work in progress</h2>
 
@@ -413,8 +402,8 @@ accept progress handlers.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-08-12)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-10-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

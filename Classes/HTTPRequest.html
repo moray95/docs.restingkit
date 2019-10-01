@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MultipartFormDataEncodable Protocol Reference</title>
+    <title>HTTPRequest Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,18 +10,18 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/MultipartFormDataEncodable" class="dashAnchor"></a>
-    <a title="MultipartFormDataEncodable Protocol Reference"></a>
+    <a name="//apple_ref/swift/Class/HTTPRequest" class="dashAnchor"></a>
+    <a title="HTTPRequest Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RestingKit Docs</a> (66% documented)</p>
+        <p><a href="../index.html">RestingKit Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html">RestingKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        MultipartFormDataEncodable Protocol Reference
+        HTTPRequest Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -37,13 +37,13 @@
                 <a href="../Classes/AlamofireClient/Error.html">– Error</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/BasicHTTPRequest.html">BasicHTTPRequest</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/HTTPDataResponse.html">HTTPDataResponse</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/HTTPError.html">HTTPError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/HTTPResponse.html">HTTPResponse</a>
@@ -65,6 +65,18 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ProgressablePromise.html">ProgressablePromise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder.html">QueryParameterEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/KeyEncodingStrategy.html">– KeyEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DateEncodingStrategy.html">– DateEncodingStrategy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/QueryParameterEncoder/DataEncodingStrategy.html">– DataEncodingStrategy</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/RequestResponseLoggingInterceptor.html">RequestResponseLoggingInterceptor</a>
@@ -89,45 +101,13 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/Array.html">Array</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Dictionary.html">Dictionary</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Double.html">Double</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Float.html">Float</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Int.html">Int</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols/HTTPClient.html">HTTPClient</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HTTPRequest.html">HTTPRequest</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Protocols/HTTPResponseType.html">HTTPResponseType</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/KeyedMultipartFormDataEncodable.html">KeyedMultipartFormDataEncodable</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Protocols/MultipartFormDataEncodable.html">MultipartFormDataEncodable</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/RequestConverter.html">RequestConverter</a>
@@ -161,14 +141,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MultipartFormDataEncodable</h1>
+            <h1>HTTPRequest</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">MultipartFormDataEncodable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HTTPRequest</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Represents a lower-level HTTP request.</p>
 
           </section>
           <section class="section task-group-section">
@@ -177,9 +157,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RestingKit26MultipartFormDataEncodableP6encode4into4withy9Alamofire0cdE0C_10Foundation11JSONEncoderCtKF"></a>
-                    <a name="//apple_ref/swift/Method/encode(into:with:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit26MultipartFormDataEncodableP6encode4into4withy9Alamofire0cdE0C_10Foundation11JSONEncoderCtKF">encode(into:with:)</a>
+                    <a name="/s:10RestingKit11HTTPRequestC10urlRequestAC10Foundation10URLRequestV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequestAC10Foundation10URLRequestV_tcfc">init(urlRequest:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,14 +167,69 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Creates a new non-streamed request from the given <code>URLRequest</code></p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">into</span> <span class="nv">formData</span><span class="p">:</span> <span class="kt">MultipartFormData</span><span class="p">,</span> <span class="n">with</span> <span class="nv">encoder</span><span class="p">:</span> <span class="kt">JSONEncoder</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:fileUrl:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc">init(urlRequest:fileUrl:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new streamed request from the given <code>URLRequest</code> and file URL</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RestingKit11HTTPRequestC10urlRequest8formDataAC10Foundation10URLRequestV_9Alamofire013MultipartFormG0CtKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(urlRequest:formData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequest8formDataAC10Foundation10URLRequestV_9Alamofire013MultipartFormG0CtKcfc">init(urlRequest:formData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new streamed request from the given <code>URLRequest</code> and <code>MultipartFormData</code>.
+This initializer creates a temporary file to store the given request body and calls <code><a href="../Classes/HTTPRequest.html#/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc">init(urlRequest:fileUrl:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">formData</span><span class="p">:</span> <span class="kt">MultipartFormData</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -206,8 +241,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://github.com/moray95/RestingKit" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-03-23)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-09-26)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
