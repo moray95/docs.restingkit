@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HTTPError Class Reference</title>
+    <title>HeaderProvider Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/HTTPError" class="dashAnchor"></a>
-    <a title="HTTPError Class Reference"></a>
+    <a name="//apple_ref/swift/Protocol/HeaderProvider" class="dashAnchor"></a>
+    <a title="HeaderProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">RestingKit Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">RestingKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        HTTPError Class Reference
+        HeaderProvider Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -159,14 +159,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>HTTPError</h1>
+            <h1>HeaderProvider</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HTTPError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HeaderProvider</span></code></pre>
 
                 </div>
               </div>
-            <p>An error thrown when a response status code is not 2xx.</p>
+            <p>An interface to provide globally available headers  to <code><a href="../Classes/RestingRequestConverter.html">RestingRequestConverter</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -175,63 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RestingKit9HTTPErrorC6statusSivp"></a>
-                    <a name="//apple_ref/swift/Property/status" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit9HTTPErrorC6statusSivp">status</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The status code of the response.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit9HTTPErrorC4data10Foundation4DataVvp"></a>
-                    <a name="//apple_ref/swift/Property/data" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit9HTTPErrorC4data10Foundation4DataVvp">data</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>The raw response body of the response.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit9HTTPErrorC7headersSDyS2SGvp"></a>
+                    <a name="/s:10RestingKit14HeaderProviderP7headersSDyS2SGvp"></a>
                     <a name="//apple_ref/swift/Property/headers" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit9HTTPErrorC7headersSDyS2SGvp">headers</a>
+                    <a class="token" href="#/s:10RestingKit14HeaderProviderP7headersSDyS2SGvp">headers</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -239,41 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The headers of the response.</p>
+                        <p>The headers to add the request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit9HTTPErrorC6status7headers4dataACSi_SDyS2SG10Foundation4DataVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(status:headers:data:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit9HTTPErrorC6status7headers4dataACSi_SDyS2SG10Foundation4DataVtcfc">init(status:headers:data:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a new HTTPError with the given status code, headers and data</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">],</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>

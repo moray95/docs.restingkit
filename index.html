@@ -81,10 +81,22 @@
                 <a href="Classes/RestingClient.html">RestingClient</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/RestingHeaderProvider.html">RestingHeaderProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingPathVariableProvider.html">RestingPathVariableProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/RestingRequest.html">RestingRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingRequestConverter/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RestingRequestConverter/Configuration.html">– Configuration</a>
               </li>
             </ul>
           </li>
@@ -104,6 +116,12 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/HTTPResponseType.html">HTTPResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HeaderProvider.html">HeaderProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PathVariableProvider.html">PathVariableProvider</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/RequestConverter.html">RequestConverter</a>
@@ -308,7 +326,8 @@ used by the <code><a href="Classes/RestingRequestConverter.html">RestingRequestC
 <span class="n">formDataEncoder</span><span class="o">.</span><span class="n">keyEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">convertToSnakeCase</span>
 <span class="n">formDataEncoder</span><span class="o">.</span><span class="n">dateEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">secondsSince1970</span>
 <span class="n">formDataEncoder</span><span class="o">.</span><span class="n">dataEncodingStrategy</span> <span class="o">=</span> <span class="o">.</span><span class="n">raw</span>
-<span class="k">let</span> <span class="nv">converter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">(</span><span class="nv">multipartFormDataEncoder</span><span class="p">:</span> <span class="n">formDataEncoder</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="o">.</span><span class="kt">Configuration</span><span class="p">(</span><span class="nv">multipartFormDataEncoder</span><span class="p">:</span> <span class="n">formDataEncoder</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">converter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <h3 id='progress-handlers' class='heading'>Progress handlers</h3>
 
@@ -379,6 +398,49 @@ accept a progress handlers.</p>
 <span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
                                   <span class="nv">httpClient</span><span class="p">:</span> <span class="kt">MyHTTPClient</span><span class="p">())</span>
 </code></pre>
+<h3 id='always-on-headers-and-path-variables' class='heading'>Always-on headers and path variables</h3>
+
+<p>Sometimes, you need to include the same headers or path variables in all requests. RestingKit has you covered! <code><a href="Classes/RestingRequestConverter.html">RestingRequestConverter</a></code> can be configured add headers and include path variables in all requests.</p>
+
+<p>For example, the <code>DeviceIdInjector</code> interceptor can be re-written the following way:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">headerProvider</span> <span class="o">=</span> <span class="kt">RestingHeaderProvider</span><span class="p">(</span><span class="nv">providers</span><span class="p">:</span> <span class="p">[</span> <span class="s">"device-id"</span><span class="p">:</span> <span class="p">{</span> <span class="kt">UIDevice</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">identifierForVendor</span><span class="p">?</span><span class="o">.</span><span class="n">uuidString</span> <span class="p">}</span> <span class="p">])</span>
+
+<span class="c1">// Or</span>
+
+<span class="n">headerProvider</span><span class="o">.</span><span class="nf">addHeader</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"device-id"</span><span class="p">)</span> <span class="p">{</span> <span class="kt">UIDevice</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">identifierForVendor</span><span class="p">?</span><span class="o">.</span><span class="n">uuidString</span> <span class="p">}</span>
+
+<span class="c1">// Or</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">deviceId</span> <span class="o">=</span> <span class="kt">UIDevice</span><span class="o">.</span><span class="n">current</span><span class="o">.</span><span class="n">identifierForVendor</span><span class="p">?</span><span class="o">.</span><span class="n">uuidString</span> <span class="p">{</span>
+    <span class="n">headerProvider</span><span class="o">.</span><span class="nf">addHeader</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"device-id"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">deviceId</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="o">.</span><span class="kt">Configuration</span><span class="p">(</span><span class="nv">headerProvider</span><span class="p">:</span> <span class="n">headerProvider</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">requestConverter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+</code></pre>
+
+<p>Now, <code>device-id</code> will be present in all requests.</p>
+
+<p>In the same way, you can provide path variables:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">pathVariableProvider</span> <span class="o">=</span> <span class="kt">RestingPathVariableProvider</span><span class="p">(</span><span class="nv">providers</span><span class="p">:</span> <span class="p">[</span> <span class="s">"userId"</span><span class="p">:</span> <span class="p">{</span> <span class="kt">AuthManager</span><span class="o">.</span><span class="n">user</span><span class="p">?</span><span class="o">.</span><span class="n">id</span> <span class="p">}</span> <span class="p">])</span>
+
+<span class="c1">// Or</span>
+
+<span class="n">pathVariableProvider</span><span class="o">.</span><span class="nf">addVariable</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"user-id"</span><span class="p">)</span> <span class="p">{</span> <span class="kt">AuthManager</span><span class="o">.</span><span class="n">user</span><span class="p">?</span><span class="o">.</span><span class="n">id</span> <span class="p">}</span>
+
+<span class="c1">// Or</span>
+
+<span class="k">if</span> <span class="k">let</span> <span class="nv">userId</span> <span class="o">=</span> <span class="kt">AuthManager</span><span class="o">.</span><span class="n">user</span><span class="p">?</span><span class="o">.</span><span class="n">id</span> <span class="p">{</span>
+    <span class="n">pathVariableProvider</span><span class="o">.</span><span class="nf">addVariable</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="s">"user-id"</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="n">userId</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="o">.</span><span class="kt">Configuration</span><span class="p">(</span><span class="nv">pathVariableProvider</span><span class="p">:</span> <span class="n">pathVariableProvider</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">requestConverter</span> <span class="o">=</span> <span class="kt">RestingRequestConverter</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+</code></pre>
+
+<p>You will now be able to use a path like <code>/users/{{userId}}/info</code> without providing the <code>userId</code> to the <code><a href="Classes/RestingRequest.html">RestingRequest</a></code>.</p>
+
+<p>When using header and path variable providers, the values added to individual requests overrides the one provided by providers.</p>
 <h2 id='work-in-progress' class='heading'>Work in progress</h2>
 
 <p>As RestingKit is still new and in development, there are some missing features that needs implementation:</p>
@@ -402,8 +464,8 @@ accept a progress handlers.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-10-01)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2020-01-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

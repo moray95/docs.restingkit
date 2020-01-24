@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HTTPRequest Class Reference</title>
+    <title>PathVariableProvider Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/HTTPRequest" class="dashAnchor"></a>
-    <a title="HTTPRequest Class Reference"></a>
+    <a name="//apple_ref/swift/Protocol/PathVariableProvider" class="dashAnchor"></a>
+    <a title="PathVariableProvider Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">RestingKit Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">RestingKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        HTTPRequest Class Reference
+        PathVariableProvider Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -41,9 +41,6 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/HTTPError.html">HTTPError</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Classes/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/HTTPResponse.html">HTTPResponse</a>
@@ -85,10 +82,22 @@
                 <a href="../Classes/RestingClient.html">RestingClient</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/RestingHeaderProvider.html">RestingHeaderProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingPathVariableProvider.html">RestingPathVariableProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/RestingRequest.html">RestingRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/RestingRequestConverter.html">RestingRequestConverter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequestConverter/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RestingRequestConverter/Configuration.html">– Configuration</a>
               </li>
             </ul>
           </li>
@@ -110,6 +119,12 @@
                 <a href="../Protocols/HTTPResponseType.html">HTTPResponseType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Protocols/HeaderProvider.html">HeaderProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PathVariableProvider.html">PathVariableProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Protocols/RequestConverter.html">RequestConverter</a>
               </li>
               <li class="nav-group-task">
@@ -122,6 +137,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/Endpoint.html">Endpoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/HTTPRequest.html">HTTPRequest</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs/Nothing.html">Nothing</a>
@@ -141,14 +159,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>HTTPRequest</h1>
+            <h1>PathVariableProvider</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HTTPRequest</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PathVariableProvider</span></code></pre>
 
                 </div>
               </div>
-            <p>Represents a lower-level HTTP request.</p>
+            <p>An interface to provide globally available path variables to <code><a href="../Classes/RestingRequestConverter.html">RestingRequestConverter</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -157,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RestingKit11HTTPRequestC10urlRequestAC10Foundation10URLRequestV_tcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(urlRequest:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequestAC10Foundation10URLRequestV_tcfc">init(urlRequest:)</a>
+                    <a name="/s:10RestingKit20PathVariableProviderP9variablesSDySSypGvp"></a>
+                    <a name="//apple_ref/swift/Property/variables" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit20PathVariableProviderP9variablesSDySSypGvp">variables</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -167,69 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a new non-streamed request from the given <code>URLRequest</code></p>
+                        <p>The variables to provid e to the request.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(urlRequest:fileUrl:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc">init(urlRequest:fileUrl:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a new streamed request from the given <code>URLRequest</code> and file URL</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">fileUrl</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit11HTTPRequestC10urlRequest8formDataAC10Foundation10URLRequestV_9Alamofire013MultipartFormG0CtKcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(urlRequest:formData:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit11HTTPRequestC10urlRequest8formDataAC10Foundation10URLRequestV_9Alamofire013MultipartFormG0CtKcfc">init(urlRequest:formData:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Creates a new streamed request from the given <code>URLRequest</code> and <code>MultipartFormData</code>.
-This initializer creates a temporary file to store the given request body and calls <code><a href="../Classes/HTTPRequest.html#/s:10RestingKit11HTTPRequestC10urlRequest7fileUrlAC10Foundation10URLRequestV_AF3URLVtcfc">init(urlRequest:fileUrl:)</a></code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">formData</span><span class="p">:</span> <span class="kt">MultipartFormData</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">variables</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -241,8 +204,8 @@ This initializer creates a temporary file to store the given request body and ca
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2019 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2019-09-26)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2020-01-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>DataEncodingStrategy Enumeration Reference</title>
+    <title>Error Enumeration Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/DataEncodingStrategy" class="dashAnchor"></a>
-    <a title="DataEncodingStrategy Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+    <a title="Error Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">RestingKit Docs</a> (100% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html">RestingKit Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        DataEncodingStrategy Enumeration Reference
+        Error Enumeration Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -159,14 +159,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>DataEncodingStrategy</h1>
+            <h1>Error</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DataEncodingStrategy</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span> <span class="p">:</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span></code></pre>
 
                 </div>
               </div>
-            <p>Defines available strategies when encoding <code>Data</code> instances.</p>
+            <p>Errors thrown  by <code><a href="../../Classes/RestingRequestConverter.html">RestingRequestConverter</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -175,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO3rawyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/raw" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO3rawyA2EmF">raw</a>
+                    <a name="/s:10RestingKit0A16RequestConverterC5ErrorO11invalidPathyA2EmF"></a>
+                    <a name="//apple_ref/swift/Element/invalidPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RestingKit0A16RequestConverterC5ErrorO11invalidPathyA2EmF">invalidPath</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -185,68 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Encode the data as is.</p>
+                        <p>The request&rsquo;s path is invalid.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">raw</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO6base64yA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/base64" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO6base64yA2EmF">base64</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Encodes the data using Base 64.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">base64</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO6customyAEy10Foundation0E0V_s0F0_ptKccAEmF"></a>
-                    <a name="//apple_ref/swift/Element/custom(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RestingKit24MultipartFormDataEncoderC0E16EncodingStrategyO6customyAEy10Foundation0E0V_s0F0_ptKccAEmF">custom(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Delegates the encoding to the closure provided.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">custom</span><span class="p">((</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">Encoder</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidPath</span></code></pre>
 
                         </div>
                       </div>
