@@ -13,7 +13,7 @@
     <a title="RestingKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">RestingKit Docs</a> (100% documented)</p>
+        <p><a href="index.html">RestingKit 0.0.8 Docs</a> (100% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -163,6 +163,7 @@
 
 <p><a href="https://travis-ci.org/moray95/RestingKit"><img src="https://img.shields.io/travis/moray95/RestingKit.svg?style=flat" alt="CI Status"></a>
 <a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/v/RestingKit.svg?style=flat" alt="Version"></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
 <a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/l/RestingKit.svg?style=flat" alt="License"></a>
 <a href="https://cocoapods.org/pods/RestingKit"><img src="https://img.shields.io/cocoapods/p/RestingKit.svg?style=flat" alt="Platform"></a></p>
 <h2 id='introduction' class='heading'>Introduction</h2>
@@ -182,13 +183,17 @@
 <li><p>Swift 5.0+</p></li>
 </ul>
 <h2 id='installation' class='heading'>Installation</h2>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
-<p>RestingKit is available through <a href="https://cocoapods.org">CocoaPods</a>. To install it, simply add the following line to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'RestingKit'</span>
+<p><a href="https://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. For usage and installation instructions, visit their website. To integrate RestingKit into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks. To integrate RestingKit into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "moray95/RestingKit"
 </code></pre>
 <h2 id='example-project' class='heading'>Example project</h2>
 
-<p>An example project is included within the repositry. To run it, first execute <code>pod install</code>, then open <code>RestingKit.xcworkspace</code>. If you want to test file uploads with the example app, go into the <code>image_server</code> directory and run <code>php -S 0.0.0.0:9000 -c .</code>, which will start a dummy server for your uploads. The uploads will be stored in the <code>uploads</code> directory.</p>
+<p>An example project is included within the repositry. To run it, first execute <code>carthage update</code>, then open <code>RestingKit.project</code>. If you want to test file uploads with the example app, go into the <code>image_server</code> directory and run <code>php -S 0.0.0.0:9000 -c .</code>, which will start a dummy server for your uploads. The uploads will be stored in the <code>uploads</code> directory.</p>
 <h2 id='usage' class='heading'>Usage</h2>
 <h3 id='basic-example' class='heading'>Basic example</h3>
 
@@ -373,7 +378,6 @@ accept a progress handlers.</p>
 <span class="p">}</span>
 
 <span class="k">let</span> <span class="nv">restingClient</span> <span class="o">=</span> <span class="kt">RestingClient</span><span class="p">(</span><span class="nv">baseUrl</span><span class="p">:</span> <span class="s">"https://jsonplaceholder.typicode.com"</span><span class="p">,</span>
-                                  <span class="nv">decoder</span><span class="p">:</span> <span class="n">decoder</span><span class="p">,</span>
                                   <span class="nv">requestConverter</span><span class="p">:</span> <span class="n">requestConverter</span><span class="p">,</span>
                                   <span class="nv">interceptors</span><span class="p">:</span> <span class="p">[</span><span class="kt">DeviceIdInjector</span><span class="p">(),</span> <span class="kt">LogInterceptor</span><span class="p">()])</span>
 </code></pre>
@@ -454,9 +458,10 @@ accept a progress handlers.</p>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>If you need help with getting started or have a feature request, just open up an issue. Pull requests are also welcome for bug fixes and new features.</p>
-<h2 id='author' class='heading'>Author</h2>
+<h2 id='authors' class='heading'>Authors</h2>
 
-<p>Moray Baruh</p>
+<p>Moray Baruh
+Burak Kelleroğlu</p>
 <h2 id='license' class='heading'>License</h2>
 
 <p>RestingKit is available under the MIT license. See the LICENSE file for more info.</p>
@@ -464,8 +469,8 @@ accept a progress handlers.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2020-01-24)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="https://moraybaruh.com" target="_blank" rel="external">Moray Baruh</a>. All rights reserved. (Last updated: 2020-07-01)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
